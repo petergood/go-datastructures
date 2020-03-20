@@ -105,3 +105,17 @@ func (h *Heap) Heapify(node int) {
 		h.Heapify(r)
 	}
 }
+
+// BuildHeap creates a heap from a given array
+func BuildHeap(a []int, heapType int) *Heap {
+	heap := NewHeap(len(a), heapType)
+	heap.arr = make([]int, len(a))
+	copy(heap.arr, a)
+	heap.size = len(a)
+
+	for i := len(a) - 1; i >= 0; i-- {
+		heap.Heapify(i)
+	}
+
+	return heap
+}

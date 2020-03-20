@@ -83,3 +83,12 @@ func TestMaxHeap(t *testing.T) {
 		t.Errorf("Incorrect max value %d", max)
 	}
 }
+
+func TestBuildHeap(t *testing.T) {
+	a := []int{1, 4, 900, 2, 5, 9, 2, 4, 10, 4, 200}
+	heap := BuildHeap(a, MinHeap)
+
+	if !validateHeap(heap) {
+		t.Errorf("Invalid heap %v", heap.arr)
+	}
+}
