@@ -1,1 +1,1 @@
-# Golang algorithms & data structures
+# Golang algorithms & data structures [![CircleCI](https://circleci.com/gh/petergood/go-datastructures.svg?style=svg)](https://circleci.com/gh/petergood/go-datastructures)
